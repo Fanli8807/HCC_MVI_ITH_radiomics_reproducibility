@@ -1,0 +1,59 @@
+﻿# Fast synthetic-demo configuration. Full-cohort analysis constants remain in config/pipeline.yml.
+random_seed: 42
+
+data:
+  case_id_column: case_id
+  label_column: MVI_label
+  split_column: split
+  clinical_columns:
+    - HBV
+    - max_diameter_cm
+    - non_smooth_margin
+    - pseudocapsule
+  phase_files:
+    DWI: dwi.nii.gz
+    A: ap.nii.gz
+    V: pvp.nii.gz
+    D: dp.nii.gz
+  demo_t1c_alias: t1c.nii.gz
+  mask_file: mask.nii.gz
+  optional_liver_mask_file: liver_mask.nii.gz
+  optional_vessel_mask_file: vessel_mask.nii.gz
+  optional_bile_duct_mask_file: bile_duct_mask.nii.gz
+
+preprocessing:
+  target_spacing_mm: [1.0, 1.0, 1.0]
+  n4_bias_correction: false
+  local_window_voxels: 3
+  local_entropy_bins: 16
+  intensity_bin_width: 25
+
+roi:
+  gtr_dilation_mm: 5.0
+  connectivity: 26
+
+habitat:
+  n_clusters: 3
+  search_k_min: 2
+  search_k_max: 6
+  max_fit_voxels_per_case: 5000
+  max_metric_voxels: 1000
+
+feature_selection:
+  univariable_p_threshold: 0.05
+  correlation_threshold: 0.90
+  lasso_cv_folds: 10
+  max_demo_features: 12
+
+radiomics:
+  pyradiomics_params: pyradiomics.yml
+
+modeling:
+  classifier_cv_folds: 5
+  threshold_method: youden
+  published_fusion_threshold: 0.473
+  bootstrap_iterations: 1000
+
+outputs:
+  save_habitat_maps: true
+  save_figures: true

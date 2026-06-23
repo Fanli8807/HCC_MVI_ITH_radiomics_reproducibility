@@ -1,0 +1,34 @@
+paper_feature_counts:
+  GTR:
+    extracted_total: 1558
+    selected_total: 8
+    selected_by_sequence:
+      DWI: 4
+      T1WI_C: 4
+  ITH:
+    extracted_total: 330
+    selected_total: 33
+    selected_by_sequence:
+      DWI: 15
+      T1WI_C: 18
+  total_selected: 41
+
+clinical_features_retained:
+  - HBV
+  - max_diameter_cm
+  - non_smooth_margin
+  - pseudocapsule
+
+top_shap_features_reported:
+  - D_ITH_original_glcm_Idmn
+  - Maximum tumor diameter
+  - Pseudocapsule
+  - V_ITH_log_sigma_5_0_mm_3D_firstorder_Kurtosis
+  - V_ITH_wavelet_HHH_glcm_Idn
+  - Non-smooth tumor margin
+  - V_ITH_wavelet_LHH_glcm_Idmn
+  - D_ITH_log_sigma_5_0_mm_3D_firstorder_Kurtosis
+  - DWI_ITH_log_sigma_5_0_mm_3D_firstorder_Kurtosis
+  - A_ITH_original_glcm_Idmn
+  - HBV infection
+  - D_ITH_wavelet_LLH_glcm_Idn

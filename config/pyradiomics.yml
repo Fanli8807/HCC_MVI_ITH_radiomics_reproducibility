@@ -1,0 +1,27 @@
+setting:
+  binWidth: 25
+  interpolator: sitkBSpline
+  resampledPixelSpacing: [1, 1, 1]
+  normalize: false
+  removeOutliers: null
+  correctMask: true
+  label: 1
+imageType:
+  Original: {}
+  Wavelet: {}
+  LoG:
+    sigma: [1.0, 2.0, 3.0, 5.0]
+  Gradient: {}
+  LBP3D: {}
+  Exponential: {}
+  Square: {}
+  SquareRoot: {}
+  Logarithm: {}
+featureClass:
+  firstorder: []
+  shape: []
+  glcm: []
+  glszm: []
+  glrlm: []
+  ngtdm: []
+  gldm: []
