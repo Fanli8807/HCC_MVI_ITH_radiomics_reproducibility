@@ -1,0 +1,8 @@
+﻿cff-version: 1.2.0
+title: HCC MVI ITH Radiomics Reproducibility Package
+message: If you use this code, please cite the associated study.
+type: software
+authors:
+  - name: HCC MVI ITH Radiomics Study Team
+version: 1.0.0
+license: MIT

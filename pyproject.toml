@@ -1,0 +1,18 @@
+﻿[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hcc-mvi-ith-radiomics"
+version = "1.0.0"
+description = "Reproducibility code for MRI-based ITH radiomics MVI prediction in HCC."
+requires-python = ">=3.9,<3.11"
+authors = [{ name = "HCC MVI ITH Radiomics Study Team" }]
+readme = "README.md"
+license = { text = "MIT" }
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

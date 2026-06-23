@@ -1,0 +1,8 @@
+results/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+.Rhistory
+.DS_Store
+Thumbs.db
